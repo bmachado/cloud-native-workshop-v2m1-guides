@@ -26,6 +26,10 @@ echo -e "HOSTNAME_SUFFIX: $HOSTNAME_SUFFIX \n"
 for i in $(eval echo "{0..$USERCOUNT}") ; do
   MODULE_NO=$(echo $MODULE | cut -c 2)
   oc new-project user${i}-guides
+  oc adm policy add-scc-to-user anyuid -z default -n user${i}-guides
+  oc adm policy add-scc-to-user privileged -z default -n user${i}-guides 
+  oc adm policy add-role-to-user admin user$i -n user${i}-guides
+
   oc -n user${i}-guides new-app quay.io/osevg/workshopper --name=user${i}-guides-${MODULE} \
       -e MASTER_URL=$MASTER_URL \
       -e CONSOLE_URL=$CONSOLE_URL \

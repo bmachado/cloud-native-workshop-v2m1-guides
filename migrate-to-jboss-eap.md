@@ -490,14 +490,25 @@ This will take you to the project status. There's nothing there yet, but that's 
 
 ---
 
-Although your Eclipse Che workspace is running on the Kubernetes cluster, it's running with a default restricted _Service Account_ that prevents you from creating most resource types. If you've completed other modules, you're probably already logged in, but let's login again: open a Terminal and issue the following command:
+Although your Eclipse Che workspace is running on the Kubernetes cluster, it's running with a default restricted _Service Account_ that prevents you from creating most resource types. Let's login to the OpenShift using the oc command.
 
-`oc login https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT --insecure-skip-tls-verify=true`
+1. click in your username and "Copy Login Command"
+![create_new]({% image_path copy_login_command.png %})
 
-Enter your username and password assigned to you:
+3. Enter your username and password assigned to you:
+![create_new]({% image_path login.png %})
 
 * Username: `{{ OPENSHIFT_USER_NAME }}`
-* Password: `r3dh4t1!`
+* Password: `{{ OPENSHIFT_USER_PASSWORD }}`
+
+4. click "Display Token"
+![create_new]({% image_path display-token.png %})
+
+5. Copy the oc command showed below "Log in with this token"
+![create_new]({% image_path login_with_this_token.png %})
+
+6. Paste it to the terminal window in Code Ready Workspaces
+![create_new]({% image_path code_ready_login_terminal.png %})
 
 You should see like:
 
