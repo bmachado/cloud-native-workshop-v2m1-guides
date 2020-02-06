@@ -4,12 +4,12 @@
 #
 
 # Defaults
-USERCOUNT=5
+USERCOUNT=6
 MODULE_TYPE=m1
 MODULE=m1
 REQUESTED_CPU=2
 REQUESTED_MEMORY=4Gi
-GOGS_PWD=openshift
+GOGS_PWD=r3dh4t1!
 
 # get routing suffix
 TMP_PROJ="dummy-$RANDOM"

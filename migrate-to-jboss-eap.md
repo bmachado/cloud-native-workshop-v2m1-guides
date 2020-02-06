@@ -35,7 +35,7 @@ Users of Eclipse, IntelliJ IDEA or Visual Studio Code will see a familiar layout
 In the project explorer pane, click on the `Import Projects...` and enter the following:
 
   * Version Control System: `GIT`
-  * URL: `{{GIT_URL}}/{{ OPENSHIFT_USER_NAME }}/cloud-native-workshop-v2m1-labs.git`(IMPORTANT: replace {{ OPENSHIFT_USER_NAME }} with your lab user)
+  * URL: `{{GIT_URL}}/{{ OPENSHIFT_USER_NAME }}/cloud-native-workshop-v2m1-labs.git`
   * Check `Import recursively (for multi-module projects)`
   * Name: `cloud-native-workshop-v2m1-labs`
 
