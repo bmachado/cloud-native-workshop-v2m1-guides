@@ -4,7 +4,7 @@
 #
 
 # Defaults
-USERCOUNT=6
+USERCOUNT=7
 MODULE_TYPE=m1
 MODULE=m1
 REQUESTED_CPU=2
@@ -47,3 +47,5 @@ for i in $(eval echo "{0..$USERCOUNT}") ; do
       -e LOG_TO_STDOUT=true
   oc -n user${i}-guides expose svc/user${i}-guides-${MODULE}
 done
+
+oc delete project $TMP_PROJ
